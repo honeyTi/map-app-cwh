@@ -1,0 +1,11 @@
+<ion-content>
+  <div class="seach-list">
+    <ion-searchbar [(ngModel)]="myInput" (ionInput)="getItems($event)"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item }}
+      </ion-item>
+    </ion-list>
+  </div>
+  <baidu-map [options]="option"></baidu-map>
+</ion-content>

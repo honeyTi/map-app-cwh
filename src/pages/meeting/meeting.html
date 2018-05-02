@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      预约
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card>
+      <ion-img-card [imgUrl]="imgUrl" [content]='content'></ion-img-card>
+      <!-- <ion-item *ngFor="let item of infoText" ng-style="height:30px" height='20px'>
+          <ion-icon name="{{item.icon}}" item-start></ion-icon>
+            {{item.name}}
+          <ion-badge item-end>{{item.data}}</ion-badge>
+      </ion-item> -->
+      <barlist [icon]="item.icon" [name]="item.name" [data]="item.data" *ngFor="let item of infoText"></barlist>
+      <div class="btn-list">
+          <button style="background: #14a846">接受</button>
+          <button style="background: rgb(230, 36, 36);">放弃</button>
+      </div>
+    </ion-card>
+  </div>
+</ion-content>

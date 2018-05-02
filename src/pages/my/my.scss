@@ -1,0 +1,93 @@
+page-my {
+    ion-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold!important;
+    }
+    .my-login {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        text-align: center;
+        background: #fff;
+        margin-bottom: 10px;
+        .login-imgs {
+            width: 30%;
+            height: 80px;
+            padding: 5px;
+            padding-left: 20px;
+            img {
+                display: block;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                border:1px solid #e4393c;
+            }
+        }
+        .login-btn {
+            width: 70%;
+            height: 60px;
+            .login-name {
+                width: 100%;
+                height: 60px;
+                line-height: 60px;
+                font-size: 16px;
+            }
+            .login-list {
+                width: 100%;
+                height: 20px;
+                display: flex;
+                div{
+                    height: 20px;
+                    line-height: 20px;
+                    width: 50%;
+                }
+            }
+        }
+    }
+    .item-list {
+        width: 100%;
+        height: 40px;
+        font-size: 14px;
+        display: flex;
+        background: #fff;
+        line-height: 40px;
+        margin-top: 5px;
+        .item-start-icon {
+            width: 10%;
+            text-align: center;
+            padding: 8px 5px;
+            div{
+                height: 24px;
+            }
+        }
+        .item-content {
+            width: 80%;
+        }
+        .item-btn {
+            width: 10%;
+            text-align: center;
+        }
+        
+    }
+    .mySelect-1 {
+        background: url('../../assets/imgs/myPage/select.png') no-repeat center;
+        background-size: 100% 100%;
+    }
+    .mySelect-2 {
+        background: url('../../assets/imgs/myPage/send.png') no-repeat center;
+        background-size: 100% 100%;
+    }
+    .mySelect-3 {
+        background: url('../../assets/imgs/myPage/homePage.png') no-repeat center;
+        background-size: 100% 100%;
+    }
+    .mySelect-4 {
+        background: url('../../assets/imgs/myPage/transaction_fill.png') no-repeat center;
+        background-size: 100% 100%;
+    }
+    .mySelect-5 {
+        background: url('../../../assets/imgs/myPage/commodity.png') no-repeat center;
+        background-size: 100% 100%;
+    }
+}

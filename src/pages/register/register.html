@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>注册</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="my-content">
+  <ion-list>
+    <ion-item>
+      <ion-label>手机号</ion-label>
+      <ion-input type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>验证码</ion-label>
+      <ion-input type="password"></ion-input>
+      <button>获取验证码</button>
+    </ion-item>
+    <ion-item>
+      <ion-label>输入密码</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>确认密码</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>用户类型</ion-label>
+      <ion-select interface="action-sheet" cancelText="取消">
+        <ion-option value="olives">个人用户</ion-option>
+        <ion-option value="xcheese" selected="true">房产商</ion-option>
+        <ion-option value="peppers">房屋中介</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item class="btn-register">
+      <button ion-button color="secondary">登录</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
