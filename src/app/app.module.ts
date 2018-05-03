@@ -17,6 +17,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
+import { HttpProvider } from '../providers/http/http';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -36,6 +38,7 @@ import { RegisterPage } from '../pages/register/register';
     BrowserModule,
     BaiduMapModule,
     ComponentsModule,
+    HttpModule,
     BaiduMapModule.forRoot({ ak: '0rtKLcFaEkANGnfrZR26h7b1dEVda9BI' }),
     IonicModule.forRoot(MyApp)
   ],
@@ -55,7 +58,8 @@ import { RegisterPage } from '../pages/register/register';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    HttpProvider
   ]
 })
 export class AppModule {}
