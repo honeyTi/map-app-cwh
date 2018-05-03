@@ -1,0 +1,29 @@
+page-message {
+    ion-header{
+        ion-navbar{
+            .info-nav{
+                width: 200px;
+                overflow: hidden;
+                border: 1px solid #6699FF;
+                border-radius: 3px;
+                margin: 10px auto;
+                padding: 0;
+                .active{
+                    background:#6699FF;
+                    color: #ffffff;;
+                }
+                li{
+                    float: left;
+                    list-style: none;
+                    background: #ffffff;
+                    width:99px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    color: #6699FF;
+                }
+            }
+        }
+        
+    }
+}

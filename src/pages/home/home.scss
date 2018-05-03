@@ -13,6 +13,24 @@ page-home {
             z-index: 1000;
             width: 100%;
             background: transparent!important;
+            padding: 8px;
+            .city{
+                float: left;
+                top: 8px;
+                width: 25%;
+                text-align: center;
+                background-color: #fff;
+                border-radius: 2px;
+                font-size: 1.6rem;
+                padding: 1.1rem;
+                margin-top:8px;
+            }
+            ion-searchbar{
+                width: 75%;
+                float: left;
+                padding-left: 0;
+            }
         }
     }
+    
 }

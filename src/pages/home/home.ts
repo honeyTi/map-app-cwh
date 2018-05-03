@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController} from 'ionic-angular';
 import { MapOptions } from 'angular2-baidu-map';
+import { CityPage } from './city/city';
 
 @Component({
   selector: 'page-home',
@@ -12,15 +13,20 @@ export class HomePage {
   myInput:string;
   searchQuery:string;
   public option: MapOptions;
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController,public modalCtrl: ModalController) {
     this.option = {
       centerAndZoom: {
         lat: 39.920116,
         lng: 116.403703,
-        zoom: 10
+        zoom: 15
       },
+      currentCity:"永州市",
       enableKeyboard: true
     }
+  }
+  openModal(event){
+    let modal = this.modalCtrl.create(CityPage);
+    modal.present();
   }
   getItems(event) {
     console.log(this.myInput)

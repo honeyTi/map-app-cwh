@@ -1,3 +1,32 @@
 page-about {
-
+   .all-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #1d1817;
+    .release-all{
+        position: absolute;
+        left: 0;
+        right:0;
+        bottom: 50px;
+        height: 130px;
+        margin-bottom: 50px;
+        text-align: center;
+        .ralease{
+            display: inline-block;
+            width: 48%;
+            height: 100%;
+            color: #ffffff;
+            text-align: center;
+            line-height: 230px;
+        }
+        .pic{
+            background: url("../../assets/imgs/publish_btn02.png") no-repeat center 0;
+	        background-size: 94px;
+        }
+    }
+   }
+   
 }

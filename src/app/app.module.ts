@@ -6,6 +6,8 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { MeetingPage } from '../pages/meeting/meeting';
 import { HomePage } from '../pages/home/home';
+import { CityPage } from '../pages/home/city/city';
+import { MessagePage } from '..//pages/message/message';
 import { TabsPage } from '../pages/tabs/tabs';
 import { MyPage } from '../pages/my/my';
 import { BaiduMapModule } from 'angular2-baidu-map';
@@ -23,10 +25,12 @@ import { RegisterPage } from '../pages/register/register';
     AboutPage,
     MeetingPage,
     HomePage,
+    CityPage,
     TabsPage,
     MyPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
+    MessagePage
   ],
   imports: [
     BrowserModule,
@@ -41,9 +45,11 @@ import { RegisterPage } from '../pages/register/register';
     AboutPage,
     MeetingPage,
     HomePage,
+    CityPage,
     TabsPage,
     MyPage,
     LoginPage,
+    MessagePage,
     RegisterPage
   ],
   providers: [
