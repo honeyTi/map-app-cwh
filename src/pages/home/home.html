@@ -1,5 +1,5 @@
 <ion-content>
-  <div class="seach-list">
+  <div class="seach-list"> 
     <div class="city" (click)="openModal($event)">
       <span class="cityName">长沙</span>
       <ion-icon name="arrow-dropdown"></ion-icon>
@@ -12,5 +12,5 @@
       </ion-item>
     </ion-list>
   </div>
-  <baidu-map [options]="option"></baidu-map> 
+  <div #map id="map_container"></div>
 </ion-content>

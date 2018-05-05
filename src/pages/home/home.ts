@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component,ViewChild ,ElementRef} from '@angular/core';
 import { NavController, ModalController} from 'ionic-angular';
-import { MapOptions } from 'angular2-baidu-map';
 import { CityPage } from './city/city';
+
+declare var BMap;
+declare var BMap_Symbol_SHAPE_POINT;
 
 @Component({
   selector: 'page-home',
@@ -12,16 +14,18 @@ export class HomePage {
   items:Array<any>;
   myInput:string;
   searchQuery:string;
-  public option: MapOptions;
+
+  @ViewChild('map') map_container: ElementRef;
+  map: any;//地图对象
+  marker: any;//标记
+
   constructor(public navCtrl: NavController,public modalCtrl: ModalController) {
-    this.option = {
-      centerAndZoom: {
-        lat: 28.232089,
-        lng: 112.943745,
-        zoom: 12
-      },
-      enableKeyboard: true
-    }
+
+  }
+  ionViewDidEnter() {
+    let map = this.map = new BMap.Map(this.map_container.nativeElement);//创建地图实例
+    let point = new BMap.Point(116.404, 39.915);
+    map.centerAndZoom(point, 14);
   }
   openModal(event){
     let modal = this.modalCtrl.create(CityPage);
@@ -40,5 +44,6 @@ export class HomePage {
       ]
     }
   }
+
 
 }
