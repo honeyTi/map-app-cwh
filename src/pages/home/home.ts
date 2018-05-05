@@ -16,11 +16,10 @@ export class HomePage {
   constructor(public navCtrl: NavController,public modalCtrl: ModalController) {
     this.option = {
       centerAndZoom: {
-        lat: 39.920116,
-        lng: 116.403703,
-        zoom: 15
+        lat: 28.232089,
+        lng: 112.943745,
+        zoom: 12
       },
-      currentCity:"永州市",
       enableKeyboard: true
     }
   }
