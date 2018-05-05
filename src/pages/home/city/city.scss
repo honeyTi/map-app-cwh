@@ -9,26 +9,10 @@ page-city {
             font-weight: bold;
             text-align: center;
         }
+    } 
+    ion-icon{
+        float: left;
+        margin-right: 1vh;
+        color: #FF3300;
     }
-    ion-content{
-        .citytext{
-            display: block;
-            text-align: left;
-            padding: .6rem;
-            font-size: 16px;
-        }
-        ul{
-            padding: 0 !important;
-            .city-li{
-                list-style: none;
-                background-color: #fff;
-                padding: 1rem .6rem;
-                text-align: left;
-                margin-bottom: 1vh;
-            }
-        }
-        
-    }
-    
-    
 }
