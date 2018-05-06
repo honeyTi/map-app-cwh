@@ -11,8 +11,11 @@
       <img src="" alt="">
     </div>
     <div class="login-btn">
-      <div class="login-name" (click)="toLogin()">
+      <div class="login-name" (click)="toLogin()" *ngIf="ifshow">
         请点击注册/登录
+      </div>
+      <div class="login-name" *ngIf="!ifshow">
+        {{user_name}}
       </div>
       <div class="login-list">
         <div>

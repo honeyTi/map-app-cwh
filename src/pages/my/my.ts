@@ -13,6 +13,9 @@ interface tab {
 export class MyPage {
   public barList: Array<tab>;
   public loginPage: any;
+  public user_name: string;
+  public user_type: string;
+  public ifshow: boolean;
 
   constructor(public navCtrl: NavController) {
     this.barList = [
@@ -38,9 +41,20 @@ export class MyPage {
       }
     ];
     this.loginPage = LoginPage;
+    this.ifshow = true;
   }
 
   toLogin () {
     this.navCtrl.push(this.loginPage);
+  }
+
+  ionViewDidLoad() {
+    this.user_name = sessionStorage.getItem('userName');
+    this.user_type = sessionStorage.getItem('userInfo');
+    console.log(this.user_name);
+    console.log(this.user_type);
+    if (this.user_name !== null && this.user_type !== null) {
+      this.ifshow = false;
+    }
   }
 }

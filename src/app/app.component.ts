@@ -19,4 +19,8 @@ export class MyApp {
       splashScreen.hide();
     });
   }
+  ionViewDidLoad() {
+    sessionStorage.setItem('userName','');
+    sessionStorage.setItem('userInfo','');
+  }
 }

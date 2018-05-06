@@ -11,7 +11,7 @@
   <ion-list>
     <ion-item>
       <ion-label>手机号</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="tel"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>验证码</ion-label>
@@ -20,7 +20,7 @@
     </ion-item>
     <ion-item>
       <ion-label>输入密码</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="psd"></ion-input>
     </ion-item>
     <ion-item>
       <ion-label>确认密码</ion-label>
@@ -28,14 +28,14 @@
     </ion-item>
     <ion-item>
       <ion-label>用户类型</ion-label>
-      <ion-select interface="action-sheet" cancelText="取消">
-        <ion-option value="olives">个人用户</ion-option>
-        <ion-option value="xcheese" selected="true">房产商</ion-option>
-        <ion-option value="peppers">房屋中介</ion-option>
+      <ion-select interface="action-sheet" [(ngModel)]="select" cancelText="取消">
+        <ion-option value="个人用户">个人用户</ion-option>
+        <ion-option value="房产商">房产商</ion-option>
+        <ion-option value="房屋中介">房屋中介</ion-option>
       </ion-select>
     </ion-item>
     <ion-item class="btn-register">
-      <button ion-button color="secondary" (click)="register()">登录</button>
+      <button ion-button color="secondary" (click)="register()">注册</button>
     </ion-item>
   </ion-list>
 </ion-content>

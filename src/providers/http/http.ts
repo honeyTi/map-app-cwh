@@ -17,10 +17,10 @@ export class HttpProvider {
     });
     let path = this.url + api + '?' + params.join('&');
     return this.http.get(path).map(
-      res => res, 
+      res => res._body, 
       err => {
         console.log(err);
       }
-  )
+    )
   }
 }

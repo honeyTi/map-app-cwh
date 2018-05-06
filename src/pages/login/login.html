@@ -16,16 +16,16 @@
 
     <ion-item>
       <ion-label floating>用户名</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" [(ngModel)]="userName"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label floating>密码</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" [(ngModel)]="userPsd"></ion-input>
     </ion-item>
     <ion-item>
       <button ion-button color="secondary" (click)="toRegister()">注册</button>
-      <button ion-button color="secondary">登录</button>
+      <button ion-button color="secondary" (click)="toLogin()">登录</button>
     </ion-item>
   </ion-list>
 </ion-content>
