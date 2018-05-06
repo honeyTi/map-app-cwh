@@ -1,11 +1,13 @@
 <ion-content>
   <div class="seach-list"> 
-    <div class="city" (click)="openModal($event)">
-      <span class="cityName">长沙</span>
+    <button ion-button icon-left color="light" (click)="openModal($event)">
+      <span class="cityName">{{ city }}</span>
       <ion-icon name="arrow-dropdown"></ion-icon>
-    </div>
+    </button>
     <ion-searchbar [(ngModel)]="myInput" (ionInput)="getItems($event)" 
-    placeholder="输入小区名"></ion-searchbar>
+    placeholder="输入小区名">
+    
+  </ion-searchbar>
     <ion-list>
       <ion-item *ngFor="let item of items">
         {{ item }}

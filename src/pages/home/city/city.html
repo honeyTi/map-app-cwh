@@ -1,21 +1,23 @@
 <ion-header>
-
   <ion-navbar>
-    <ion-title>选择城市</ion-title>
+    <ion-title>城市选择</ion-title>
   </ion-navbar>
-
 </ion-header>
-
 
 <ion-content padding  class="my-content">
     <ion-searchbar [(ngModel)]="myInput" (ionInput)="getItems($event)" 
     placeholder="请输入城市名或者首字母查询"></ion-searchbar>
+    <ion-list>
+      <ion-item *ngFor="let item of items">
+        {{ item }}
+      </ion-item>
+    </ion-list>
     <ion-item-group>
       <ion-item-divider color="light">当前定位城市<ion-icon name="pin"></ion-icon></ion-item-divider>
-      <ion-item>永州</ion-item>
+      <ion-item (click)="choose($event)">永州</ion-item>
     </ion-item-group>
     <ion-item-group>
-        <ion-item-divider color="light">热门城市<ion-icon name="flame"></ion-icon></ion-item-divider>
-        <ion-item>长沙</ion-item>
+        <ion-item-divider color="light" >热门城市<ion-icon name="flame"></ion-icon></ion-item-divider>
+        <ion-item (click)="choose($event)">长沙</ion-item>
       </ion-item-group>
 </ion-content>

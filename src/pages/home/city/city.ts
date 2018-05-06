@@ -1,5 +1,6 @@
+///<reference path="../../../assets/js/jquery.d.ts"/>
 import { Component } from '@angular/core';
-import {NavController, NavParams } from 'ionic-angular';
+import {NavController, NavParams, ViewController} from 'ionic-angular';
 
 @Component({
   selector: 'page-city',
@@ -11,7 +12,7 @@ export class CityPage {
   items:Array<any>;
   myInput:string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams,public viewCtrl: ViewController) {
   }
 
   getItems(event) {
@@ -27,5 +28,9 @@ export class CityPage {
       ]
     }
   }
-
+  
+  choose(e:any){
+    let data = e.target.innerText;
+    this.viewCtrl.dismiss(data);
+  }
 }

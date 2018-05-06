@@ -1,7 +1,7 @@
 page-home {
-    // .anchorBL {
-    //     display:none;
-    // }
+    .anchorBL {
+        display:none;
+    }
     ion-content {
         width: 100%;
         height: 100%;
@@ -18,19 +18,22 @@ page-home {
             width: 100%;
             background: transparent!important;
             padding: 8px;
-            .city{
-                float: left;
-                top: 8px;
-                width: 25%;
-                text-align: center;
-                background-color: #fff;
-                border-radius: 2px;
-                font-size: 1.6rem;
-                padding: 1.1rem;
+            button{
+                float: left; 
                 margin-top:8px;
+                font-size: 1.6rem;
+                width: 20%;
+                padding: 2rem;
+                margin-right: 0;
+                .cityName{
+                    margin-left: 1vh;
+                }
+                ion-icon{
+                    margin-left: 1vh;
+                }
             }
             ion-searchbar{
-                width: 75%;
+                width: 79%;
                 float: left;
                 padding-left: 0;
             }
