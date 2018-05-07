@@ -50,17 +50,21 @@ export class HomePage {
     subwayControl.prototype.initialize = function(map){
       let div = document.createElement('div');
       $(div).css({
-        width :"32px",
+        width :"34px",
         height:"32px",
-        background:"#fff",
-
-      })
-      $(div).html("<i>2222</i>");
+        border: "1px solid #d9d7d5",
+        "border-radius": "3px",
+        background : "url(../../assets/imgs/subway.png) no-repeat -12px -12px",
+        "background-size":"55px 57px",
+        "box-shadow": "1px 1px 1px rgba(0,0,0,.2)",
+      });
       map.getContainer().appendChild(div);
       return div;
     }
     map.addControl(new subwayControl);
-  }
+    //画出行政区域------------------------------------------------
+    
+}
   openModal(event){
     let modal = this.modalCtrl.create(CityPage);
     // 接收城市选择出来的数据
