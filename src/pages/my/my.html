@@ -1,6 +1,11 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>个人中心</ion-title>
+    <ion-title>我</ion-title>
+    <!-- <ion-buttons end>
+        <button ion-button icon-only>
+            <ion-icon name="settings"></ion-icon>
+        </button>
+      </ion-buttons> -->
   </ion-navbar>
 </ion-header>
 
@@ -22,7 +27,7 @@
           积分
         </div>
         <div>
-          点赞
+          收藏
         </div>
       </div>
     </div>
@@ -36,4 +41,13 @@
         <div class="item-btn"><ion-icon name="ios-arrow-forward-outline"></ion-icon></div>
       </div>
   </div>
+  <!-- 设置：退出登陆、分享、建议 -->
+  <ion-fab bottom right >
+      <button ion-fab mini><ion-icon name="settings"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab><ion-icon name="exit"></ion-icon></button>
+        <button ion-fab><ion-icon name="share"></ion-icon></button>
+        <button ion-fab><ion-icon name="build"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
 </ion-content>

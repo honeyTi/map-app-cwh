@@ -6,14 +6,19 @@ page-my {
                 color: #ea5404;
                 font-weight: bold!important;
             }
+            ion-buttons{
+                .bar-button-md[icon-only] ion-icon{
+                    font-size: 1.5rem;
+                }
+            }
     }
     .my-login {
         width: 100%;
-        height: 80px;
+        height: 100px;
         display: flex;
         text-align: center;
         background: #fff;
-        margin-bottom: 10px;
+        margin: 2px 0 10px 0;
         .login-imgs {
             width: 30%;
             height: 80px;
@@ -40,6 +45,7 @@ page-my {
                 width: 100%;
                 height: 20px;
                 display: flex;
+                margin-top: 1.5vh;
                 div{
                     height: 20px;
                     line-height: 20px;
@@ -50,16 +56,17 @@ page-my {
     }
     .item-list {
         width: 100%;
-        height: 40px;
-        font-size: 14px;
+        height: 46px;
+        font-size: 13px;
         display: flex;
         background: #fff;
-        line-height: 40px;
+        line-height: 46px;
         margin-top: 5px;
+        padding-left: 5px;
         .item-start-icon {
             width: 10%;
             text-align: center;
-            padding: 8px 5px;
+            padding: 8px 4px;
             div{
                 height: 24px;
             }
@@ -75,22 +82,22 @@ page-my {
     }
     .mySelect-1 {
         background: url('../../assets/imgs/myPage/select.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-2 {
         background: url('../../assets/imgs/myPage/send.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-3 {
         background: url('../../assets/imgs/myPage/homePage.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-4 {
         background: url('../../assets/imgs/myPage/transaction_fill.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-5 {
         background: url('../../../assets/imgs/myPage/commodity.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
 }

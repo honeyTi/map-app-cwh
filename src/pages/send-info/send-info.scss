@@ -2,14 +2,23 @@ page-send-info {
     ion-title {
         text-align: center;
         font-size: 18px;
-        font-weight: bold;
+        .toolbar-title-md{
+            color: #ea5404;
+            font-weight: bold;
+        }
+    }
+    ion-buttons{
+        .button-inner{
+            color: #ea5404;
+        }
+        
     }
     .send-content {
         width: 100%;
         min-height: 500px;
         padding: 10px;
         ion-input {
-            border: 1px solid #b9b2b2;
+            border: 1px solid #d3cdcd;
             border-radius: 5px;
             margin-bottom: 20px;
             background: #fff;
