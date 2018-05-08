@@ -28,7 +28,7 @@
     </div>
   </div>
   <div class="menu-list">
-      <div class="item-list" *ngFor="let item of barList">
+      <div class="item-list" *ngFor="let item of barList" (click)="toDetail(item.name)">
         <div class="item-start-icon">
           <div class="{{item.png}}"></div>
         </div>

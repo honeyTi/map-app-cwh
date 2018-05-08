@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>我发布的需求</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="my-content">
+  <ion-card *ngFor="let item of resData">
+    <ion-card-header>
+      {{item.publish_name}}
+    </ion-card-header>
+    <ion-card-content>
+      {{item.publish_content}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

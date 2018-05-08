@@ -1,8 +1,8 @@
 <ion-content padding>
   <div class="all-box">
     <div class="release-all">
-      <span class="ralease pic" >发布需求</span>
-      <!-- <span class="ralease release2">发布房源</span> -->
+      <span class="ralease pic" (click)="toSendInfo()">发布需求</span>
+      <span class="ralease pic2" *ngIf="ifShow" (click)="toSendHouse()">发布房源</span>
   </div>
   </div>
 </ion-content>

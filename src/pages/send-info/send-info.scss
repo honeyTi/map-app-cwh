@@ -1,0 +1,24 @@
+page-send-info {
+    ion-title {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .send-content {
+        width: 100%;
+        min-height: 500px;
+        padding: 10px;
+        ion-input {
+            border: 1px solid #b9b2b2;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background: #fff;
+        }
+        ion-textarea {
+            border: 1px solid #b9b2b2;
+            border-radius: 5px;
+            background: #fff;
+            height: 200px;
+        }
+    }
+}
