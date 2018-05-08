@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { PublishDetailPage } from '../publish-detail/publish-detail';
 
 interface tab {
   png: string;
@@ -46,6 +47,14 @@ export class MyPage {
 
   toLogin () {
     this.navCtrl.push(this.loginPage);
+  }
+
+  toDetail(event) {
+    console.log('------测试--------');
+    console.log(event);
+    if (event === '我发布的需求') {
+      this.navCtrl.push(PublishDetailPage);
+    }
   }
 
   ionViewDidLoad() {

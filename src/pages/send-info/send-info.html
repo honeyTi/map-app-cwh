@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      发布需求
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="sendInfo()">
+        发布
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="my-content">
+  <div class="send-content">
+    <ion-input placeholder="需求人" clearInput [(ngModel)]="sendUser"></ion-input>
+    <ion-input placeholder="电话" clearInput [(ngModel)]="sendMoble"></ion-input>
+    <ion-textarea placeholder="需求描述" [(ngModel)]="sendContent"></ion-textarea>
+  </div>
+  
+</ion-content>

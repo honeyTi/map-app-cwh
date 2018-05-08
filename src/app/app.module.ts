@@ -19,6 +19,8 @@ import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { HttpProvider } from '../providers/http/http';
 import { HttpModule } from '@angular/http';
+import { SendInfoPage } from '../pages/send-info/send-info';
+import { PublishDetailPage } from '../pages/publish-detail/publish-detail';
 
 
 @NgModule({
@@ -32,7 +34,9 @@ import { HttpModule } from '@angular/http';
     MyPage,
     LoginPage,
     RegisterPage,
-    MessagePage
+    MessagePage,
+    SendInfoPage,
+    PublishDetailPage
   ],
   imports: [
     BrowserModule,
@@ -53,7 +57,9 @@ import { HttpModule } from '@angular/http';
     MyPage,
     LoginPage,
     MessagePage,
-    RegisterPage
+    RegisterPage,
+    SendInfoPage,
+    PublishDetailPage
   ],
   providers: [
     StatusBar,
