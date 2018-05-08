@@ -2,7 +2,10 @@ page-my {
     ion-title {
             text-align: center;
             font-size: 18px;
-            font-weight: bold!important;
+            .toolbar-title-md{
+                color: #ea5404;
+                font-weight: bold!important;
+            }
     }
     .my-login {
         width: 100%;
