@@ -21,6 +21,7 @@ export class LoginPage {
   public userPsd: string;
   public mapData: object;
   public myPage:any;
+  isable:boolean = true;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public http: HttpProvider, private toastCtrl: ToastController) {
     this.registerPage = RegisterPage;
@@ -44,7 +45,14 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
   }
-
+  able(){
+    if( this.userName != '' && this.userPsd != '' 
+    && this.userName != undefined && this.userPsd != undefined ){
+      this.isable = false;
+    }else{
+      this.isable = true;
+    }
+  }
   toRegister() {
     this.navCtrl.push(this.registerPage);
   }

@@ -13,19 +13,19 @@
 
 <ion-content padding class="my-content">
   <ion-list>
-
     <ion-item>
       <ion-label floating>用户名</ion-label>
-      <ion-input type="text" [(ngModel)]="userName"></ion-input>
+      <ion-input type="text" [(ngModel)]="userName" (input)="able()"></ion-input>
     </ion-item>
   
     <ion-item>
       <ion-label floating>密码</ion-label>
-      <ion-input type="password" [(ngModel)]="userPsd"></ion-input>
-    </ion-item>
-    <ion-item>
-      <button ion-button color="secondary" (click)="toRegister()">注册</button>
-      <button ion-button color="secondary" (click)="toLogin()">登录</button>
+      <ion-input type="password" [(ngModel)]="userPsd" (input)="able()"></ion-input>
     </ion-item>
   </ion-list>
+  <div class="btns">
+      <button ion-button block [(disabled)]="isable" (click)="toLogin()">登录</button>
+      还没有账户？<span class="to" (click)="toRegister()">注册 </span> 一个吧
+  </div>
+  
 </ion-content>

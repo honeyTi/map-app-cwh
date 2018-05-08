@@ -2,4 +2,22 @@ page-login {
     ion-app.md [padding] .scroll-content {
         padding: 0;
     }
+    ion-title {
+        text-align: center;
+        font-size: 18px;
+        margin-right: 5vh;
+        .toolbar-title.toolbar-title-md {
+            color:#ea5404;
+            font-weight: bold;
+        }
+    }
+    ion-content{
+        .btns{
+            padding: 0 12px;
+            .to{
+                color: #ea5404;
+            }
+        }
+    }
+    
 }

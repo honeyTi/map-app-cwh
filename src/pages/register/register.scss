@@ -1,4 +1,13 @@
 page-register {
+    ion-title {
+        text-align: center;
+        font-size: 18px;
+        margin-right: 5vh;
+        .toolbar-title.toolbar-title-md {
+            color:#ea5404;
+            font-weight: bold;
+        }
+    }
     .btn-register {
         text-align: center;
         .item-md .item-button {
