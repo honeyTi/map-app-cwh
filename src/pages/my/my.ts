@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { PublishDetailPage } from '../publish-detail/publish-detail';
+import { SuggestPage } from '../suggest/suggest';
 
 interface tab {
   png: string;
@@ -55,6 +56,9 @@ export class MyPage {
     if (event === '我发布的需求') {
       this.navCtrl.push(PublishDetailPage);
     }
+  }
+  toSuggest(){
+    this.navCtrl.push(SuggestPage);
   }
 
   ionViewDidLoad() {

@@ -21,6 +21,8 @@ import { HttpProvider } from '../providers/http/http';
 import { HttpModule } from '@angular/http';
 import { SendInfoPage } from '../pages/send-info/send-info';
 import { PublishDetailPage } from '../pages/publish-detail/publish-detail';
+import { SuggestPage } from '../pages/suggest/suggest';
+
 
 
 @NgModule({
@@ -36,7 +38,8 @@ import { PublishDetailPage } from '../pages/publish-detail/publish-detail';
     RegisterPage,
     MessagePage,
     SendInfoPage,
-    PublishDetailPage
+    PublishDetailPage,
+    SuggestPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +62,8 @@ import { PublishDetailPage } from '../pages/publish-detail/publish-detail';
     MessagePage,
     RegisterPage,
     SendInfoPage,
-    PublishDetailPage
+    PublishDetailPage,
+    SuggestPage
   ],
   providers: [
     StatusBar,
