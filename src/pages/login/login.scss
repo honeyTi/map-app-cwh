@@ -12,6 +12,14 @@ page-login {
         }
     }
     ion-content{
+        ion-list{
+            ion-label{
+                ion-icon{
+                    margin-right: 3vh;
+                    margin-left: 3vh;
+                }
+            }
+        }
         .btns{
             padding: 0 12px;
             .to{

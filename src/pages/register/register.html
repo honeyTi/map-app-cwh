@@ -10,31 +10,33 @@
 <ion-content padding class="my-content">
   <ion-list>
     <ion-item>
-      <ion-label>手机号</ion-label>
-      <ion-input type="text" [(ngModel)]="tel"></ion-input>
+      <ion-label><ion-icon name="contact"></ion-icon>手机号</ion-label>
+      <ion-input type="text" [(ngModel)]="tel" (input)="able()"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>验证码</ion-label>
-      <ion-input type="password"></ion-input>
-      <button>获取验证码</button>
+      <ion-label><ion-icon name="key"></ion-icon>验证码</ion-label>
+      <ion-input type="number" [(ngModel)]="idcode" (input)="able()"></ion-input>
+    </ion-item>
+    <div class="code">
+        <button ion-button small [(disabled)]="!verifyCode.disable" (click)="getCode()">{{verifyCode.verifyCodeTips}}</button>
+    </div>
+    <ion-item>
+      <ion-label><ion-icon name="lock"></ion-icon>输入密码</ion-label>
+      <ion-input type="password" [(ngModel)]="psd" (input)="able()"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>输入密码</ion-label>
-      <ion-input type="password" [(ngModel)]="psd"></ion-input>
+      <ion-label><ion-icon name="lock"></ion-icon>确认密码</ion-label>
+      <ion-input type="password" [(ngModel)]="compsd" (input)="able()"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label>确认密码</ion-label>
-      <ion-input type="password"></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>用户类型</ion-label>
-      <ion-select interface="action-sheet" [(ngModel)]="select" cancelText="取消">
+      <ion-label><ion-icon name="alert"></ion-icon>用户类型</ion-label>
+      <ion-select interface="action-sheet" [(ngModel)]="select" cancelText="取消" (ionChange)="able()">
         <ion-option value="个人用户">个人用户</ion-option>
         <ion-option value="房产商">房产商</ion-option>
       </ion-select>
     </ion-item>
     <ion-item class="btn-register">
-      <button ion-button full (click)="register()">提交</button>
+      <button ion-button full (click)="register()" [(disabled)]="isable">提交</button>
     </ion-item>
   </ion-list>
 </ion-content>

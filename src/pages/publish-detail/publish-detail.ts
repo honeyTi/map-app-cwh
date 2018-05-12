@@ -41,7 +41,7 @@ export class PublishDetailPage {
         let map = JSON.parse(res);
         if (map.code === '0') {
           console.log('暂无发布');
-        } else if (map.code === '1') {
+        } else if (map.code === '1') { 
           this.resData = map.results
         } else if (map.code === '2') {
           console.log('服务器内部错误')
