@@ -23,4 +23,14 @@ export class HttpProvider {
       }
     )
   }
+
+  loadDataNoQuery(api) {
+    let path = this.url + api + '?';
+    return this.http.get(path).map(
+      res => res._body,
+      err => {
+        console.log(err);
+      }
+    )
+  }
 }

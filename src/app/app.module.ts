@@ -21,6 +21,9 @@ import { HttpProvider } from '../providers/http/http';
 import { HttpModule } from '@angular/http';
 import { SendInfoPage } from '../pages/send-info/send-info';
 import { PublishDetailPage } from '../pages/publish-detail/publish-detail';
+import { HouseInfoPage } from '../pages/house-info/house-info';
+import { PublishBuildPage } from '../pages/publish-build/publish-build';
+import { PubulishInfoPage } from '../pages/pubulish-info/pubulish-info';
 import { SuggestPage } from '../pages/suggest/suggest';
 
 
@@ -39,6 +42,9 @@ import { SuggestPage } from '../pages/suggest/suggest';
     MessagePage,
     SendInfoPage,
     PublishDetailPage,
+    HouseInfoPage,
+    PublishBuildPage,
+    PubulishInfoPage,
     SuggestPage
   ],
   imports: [
@@ -63,6 +69,9 @@ import { SuggestPage } from '../pages/suggest/suggest';
     RegisterPage,
     SendInfoPage,
     PublishDetailPage,
+    HouseInfoPage,
+    PublishBuildPage,
+    PubulishInfoPage,
     SuggestPage
   ],
   providers: [

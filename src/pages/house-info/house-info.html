@@ -1,0 +1,132 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>
+      发布房源
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="my-content" style="overflow: auto;">
+  <div class="search-bar-list">
+    <div class="search-bar-input">
+      <ion-searchbar [(ngModel)]="inputData" (ionInput)="getItems()"></ion-searchbar>
+      <ion-list>
+        <ion-item *ngFor="let item of houseInfoList" (click)="getListName(item)">
+          {{ item }}
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="search-bar-add">
+      <button ion-button clear (click)="toPublishBuilding()">+新增楼盘</button>
+    </div>
+  </div>
+  <div class="content-floor-info" *ngIf="houseInfoShow">
+    <div class="content-floor-title">大厦信息</div>
+    <ul class="list-content-info">
+      <li *ngFor="let item of houseInfo">
+        <div class="list-label">{{item.label}}:</div>
+        <div class="list-content">{{item.value}}</div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="content-floor-info" *ngIf="houseInfoShow" style="margin-top: 20px">
+    <div class="content-floor-title">房源信息</div>
+    <ul class="list-content-info">
+      <li>
+        <div class="list-label">购房属性:</div>
+        <div class="list-content list-content-1">
+          <ion-item>
+            <ion-select [(ngModel)]="housePro" interface="action-sheet" cancelText="取消">
+              <ion-option value="整层">整层</ion-option>
+              <ion-option value="整栋">整栋</ion-option>
+              <ion-option value="众创空间">众创空间</ion-option>
+              <ion-option value="商务中心">商务中心</ion-option>
+              <ion-option value="创意产业园">创意产业园</ion-option>
+              <ion-option value="写字楼">写字楼</ion-option>
+              <ion-option value="工位">工位</ion-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </li>
+      <li>
+        <div class="list-label">房源面积:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="areaVal" class="houseInput"> m^2
+        </div>
+      </li>
+      <li>
+        <div class="list-label">房源单价:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="priceVal" class="houseInput"> 元/m^2/天
+        </div>
+      </li>
+      <li>
+        <div class="list-label">交付状态:</div>
+        <div class="list-content list-content-1">
+          <ion-item>
+            <ion-select [(ngModel)]="jfInfo" interface="action-sheet" cancelText="取消">
+              <ion-option value="标准交付">标准交付</ion-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </li>
+      <li>
+        <div class="list-label">交付日期:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="jfDate" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">最短日期:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="zdDate" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">付款方式:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="payType" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">是否结佣:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="jyCode" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">装修免租:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="zxNoPay" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">看房时间:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="lookStartDate" class="houseInput" style="width: 50px"> 至
+          <input type="text" [(ngModel)]="lookEndDate" class="houseInput" style="width: 50px">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">房源简介:</div>
+        <div class="list-content">
+          <input type="textarea" [(ngModel)]="discInfo" class="houseInput" style="height: 78px;">
+        </div>
+      </li>
+    </ul>
+    <button ion-button color="secondary" (click)="publishHouse()" class="my-publish-btn">确定发布</button>
+  </div>
+
+</ion-content>

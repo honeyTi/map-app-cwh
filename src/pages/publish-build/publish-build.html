@@ -1,0 +1,96 @@
+<!--
+  Generated template for the PublishBuildPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>发布楼盘</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="my-content" style="overflow: auto;">
+  <div class="content-floor-info">
+    <div class="content-floor-title">楼盘信息</div>
+    <ul class="list-content-info">
+      <li>
+        <div class="list-label">商圈:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_name" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">物业:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_company" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">层数:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_floor" class="houseInput"> 层
+        </div>
+      </li>
+      <li>
+        <div class="list-label">层高:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_floor_info" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">车位:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_car_stop" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">电梯:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_dt" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">空调:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_kt" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">入驻企业:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_all_company" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">地铁:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_subway" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">城市:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_area" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">区县:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_area_detail" class="houseInput">
+        </div>
+      </li>
+      <li>
+        <div class="list-label">坐标:</div>
+        <div class="list-content">
+          <input type="text" [(ngModel)]="houseinfo_lon" class="houseInput" style="width: 50px"> 经度
+          <input type="text" [(ngModel)]="houseinfo_lat" class="houseInput" style="width: 50px"> 纬度
+        </div>
+      </li>
+    </ul>
+    <button ion-button color="secondary" (click)="publishBuild()" class="my-publish-btn">确定发布</button>
+  </div>
+</ion-content>

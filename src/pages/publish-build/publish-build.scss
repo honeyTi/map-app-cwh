@@ -1,0 +1,46 @@
+page-publish-build {
+        .content-floor-info {
+                width: 100%;
+                background: #fff;
+                min-height: 200px;
+                .content-floor-title {
+                    font-size: 16px;
+                    padding: 5px 10px;
+                }
+        }
+        .list-content-info {
+                width: 100%;
+                li {
+                    display: flex;
+                    font-size: 14px;
+                    line-height: 24px;
+                    .list-label {
+                        width: 24%;
+                        text-align: right;
+                        padding: 5px;
+                    }
+                    .list-content {
+                        width: 76%;
+                        text-align: left;
+                        padding: 5px;
+                        color: #918888
+                    }
+                    .list-content-1 {
+                        height: 26px!important;
+                        overflow: hidden;
+                    }
+                    
+                }
+        }
+        .my-publish-btn {
+                width: 95%;
+                margin: 5% 2.5%;
+                font-size: 16px;
+        }
+        .houseInput {
+                height: 24px;
+                border: none;
+                border-radius: 5px;
+                background: #e6e6e6;
+        }
+}

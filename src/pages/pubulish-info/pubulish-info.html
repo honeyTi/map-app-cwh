@@ -1,0 +1,22 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>我发布的房源</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding class="my-content" style="overflow: auto;">
+  <ion-card *ngFor="let item of list">
+    <ion-card-header>
+      {{item.buildName}}
+    </ion-card-header>
+    <ion-card-content>
+      {{item.housePro}}
+    </ion-card-content>
+    <ion-card-content>
+      {{item.date}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

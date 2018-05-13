@@ -3,6 +3,7 @@ import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { SendInfoPage } from '../send-info/send-info';
 import { ToastController } from 'ionic-angular';
+import { HouseInfoPage } from '../house-info/house-info';
 
 @Component({
   selector: 'page-about',
@@ -49,8 +50,6 @@ export class AboutPage {
   
 
   toSendHouse() {
-    console.log(this.userName);
-    console.log(this.userType);
     if (this.userName === null && this.userType === null) {
       
       this.presentToast('请先登录用户');
@@ -60,6 +59,7 @@ export class AboutPage {
         })
       }, 2000);
     } else {
+      this.navCtrl.push(HouseInfoPage);
     }
   }
 
