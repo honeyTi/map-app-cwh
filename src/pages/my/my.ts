@@ -2,11 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { PublishDetailPage } from '../publish-detail/publish-detail';
-<<<<<<< HEAD
 import { PubulishInfoPage } from '../pubulish-info/pubulish-info';
-=======
 import { SuggestPage } from '../suggest/suggest';
->>>>>>> 5705b077833cc0beb4cbbafde1e14eca31f3969f
 
 interface tab {
   png: string;
