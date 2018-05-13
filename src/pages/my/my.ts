@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { LoginPage } from '../login/login';
 import { PublishDetailPage } from '../publish-detail/publish-detail';
+import { PubulishInfoPage } from '../pubulish-info/pubulish-info';
 
 interface tab {
   png: string;
@@ -54,6 +55,8 @@ export class MyPage {
     console.log(event);
     if (event === '我发布的需求') {
       this.navCtrl.push(PublishDetailPage);
+    } else if (event === '我发布的房源') {
+      this.navCtrl.push(PubulishInfoPage);
     }
   }
 

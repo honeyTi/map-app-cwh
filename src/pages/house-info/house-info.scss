@@ -4,4 +4,94 @@ page-house-info {
         font-size: 18px;
         font-weight: bold;
     }
+    ion-content {
+        position: relative;
+    }
+    .search-bar-list {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .search-bar-input{
+            width:70%;
+            padding: 4px;
+        }
+        .searchbar-md {
+            background: inherit;
+            padding: 0;
+        }
+        .search-bar-add {
+            width: 30%;
+            padding: 4px;
+        }
+        .button-clear-md {
+            color: #000;
+            font-size: 16px;
+        }
+    }
+
+    .content-floor-info {
+        width: 100%;
+        margin-top: 80px;
+        background: #fff;
+        min-height: 200px;
+        .content-floor-title {
+            font-size: 16px;
+            padding: 5px 10px;
+        }
+    }
+
+    .list-content-info {
+        width: 100%;
+        li {
+            display: flex;
+            font-size: 14px;
+            line-height: 24px;
+            .list-label {
+                width: 24%;
+                text-align: right;
+                padding: 5px;
+            }
+            .list-content {
+                width: 76%;
+                text-align: left;
+                padding: 5px;
+                color: #918888
+            }
+            .list-content-1 {
+                height: 26px!important;
+                overflow: hidden;
+            }
+            
+        }
+    }
+    ion-item {
+        height: 16px!important;
+        font-size: 14px;
+        /deep/ {
+            span.button-inner {
+                height: 16px!important;
+            }
+            ion-select.select.select-md.ng-valid.ng-dirty.ng-touched {
+                padding: 0!important;
+            }
+            .input-wrapper {
+                font-size: 14px!important;
+                padding: 0!important;
+                height: 22px;
+            }
+        }
+    }
+    .houseInput {
+        height: 24px;
+        border: none;
+        border-radius: 5px;
+        background: #e6e6e6;
+    }
+    .my-publish-btn {
+        width: 95%;
+        margin: 5% 2.5%;
+        font-size: 16px;
+    }
 }

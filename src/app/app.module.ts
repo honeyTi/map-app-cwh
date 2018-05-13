@@ -22,6 +22,8 @@ import { HttpModule } from '@angular/http';
 import { SendInfoPage } from '../pages/send-info/send-info';
 import { PublishDetailPage } from '../pages/publish-detail/publish-detail';
 import { HouseInfoPage } from '../pages/house-info/house-info';
+import { PublishBuildPage } from '../pages/publish-build/publish-build';
+import { PubulishInfoPage } from '../pages/pubulish-info/pubulish-info';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { HouseInfoPage } from '../pages/house-info/house-info';
     MessagePage,
     SendInfoPage,
     PublishDetailPage,
-    HouseInfoPage
+    HouseInfoPage,
+    PublishBuildPage,
+    PubulishInfoPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +66,9 @@ import { HouseInfoPage } from '../pages/house-info/house-info';
     RegisterPage,
     SendInfoPage,
     PublishDetailPage,
-    HouseInfoPage
+    HouseInfoPage,
+    PublishBuildPage,
+    PubulishInfoPage
   ],
   providers: [
     StatusBar,
