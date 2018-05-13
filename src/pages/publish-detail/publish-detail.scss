@@ -1,3 +1,11 @@
 page-publish-detail {
-
+    ion-title {
+        text-align: center;
+        margin-right: 3.5vh;
+        font-size: 16px;
+        .toolbar-title-md{
+            color: #ea5404;
+            font-weight: bold;
+        }
+    }
 }

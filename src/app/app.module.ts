@@ -21,9 +21,14 @@ import { HttpProvider } from '../providers/http/http';
 import { HttpModule } from '@angular/http';
 import { SendInfoPage } from '../pages/send-info/send-info';
 import { PublishDetailPage } from '../pages/publish-detail/publish-detail';
+<<<<<<< HEAD
 import { HouseInfoPage } from '../pages/house-info/house-info';
 import { PublishBuildPage } from '../pages/publish-build/publish-build';
 import { PubulishInfoPage } from '../pages/pubulish-info/pubulish-info';
+=======
+import { SuggestPage } from '../pages/suggest/suggest';
+
+>>>>>>> 5705b077833cc0beb4cbbafde1e14eca31f3969f
 
 
 @NgModule({
@@ -40,9 +45,13 @@ import { PubulishInfoPage } from '../pages/pubulish-info/pubulish-info';
     MessagePage,
     SendInfoPage,
     PublishDetailPage,
+<<<<<<< HEAD
     HouseInfoPage,
     PublishBuildPage,
     PubulishInfoPage
+=======
+    SuggestPage
+>>>>>>> 5705b077833cc0beb4cbbafde1e14eca31f3969f
   ],
   imports: [
     BrowserModule,
@@ -66,9 +75,13 @@ import { PubulishInfoPage } from '../pages/pubulish-info/pubulish-info';
     RegisterPage,
     SendInfoPage,
     PublishDetailPage,
+<<<<<<< HEAD
     HouseInfoPage,
     PublishBuildPage,
     PubulishInfoPage
+=======
+    SuggestPage
+>>>>>>> 5705b077833cc0beb4cbbafde1e14eca31f3969f
   ],
   providers: [
     StatusBar,

@@ -1,0 +1,40 @@
+page-suggest {
+    ion-title {
+        text-align: center;
+        font-size: 18px;
+        margin-right: 3.5vh;
+        .toolbar-title-md{
+            color: #ea5404;
+            font-weight: bold;
+            
+        }
+    }
+    ion-content{
+        ion-card{
+            ion-card-content{
+                color: rgba(180, 164, 164, 0.459);
+                ion-textarea{
+                    height: 100px;
+                    .text-input-md{
+                        margin: 0;
+                        margin-bottom: 13px;
+                        color: #ccc;
+                    }
+                    
+                }
+                .pic{
+                    width: 80px;
+                    height: 80px;
+                    border: 1px dotted rgba(180, 164, 164, 0.459);
+                    line-height: 80px;
+                    text-align: center;
+                }
+            }
+        }
+        .btns{
+            padding: 0 11px;
+        }
+          
+    }
+
+}

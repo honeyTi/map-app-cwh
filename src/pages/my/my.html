@@ -1,31 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>个人中心</ion-title>
+    <ion-title>我</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content class="my-content">
   <div class="my-login">
-    <div class="login-imgs">
-      <img src="" alt="">
-    </div>
-    <div class="login-btn">
-      <div class="login-name" (click)="toLogin()" *ngIf="ifshow">
-        请点击注册/登录
-      </div>
-      <div class="login-name" *ngIf="!ifshow">
-        {{user_name}}
-      </div>
+    <div class="top-login">
+      <img src="../../assets/imgs/myPage/login.png" alt="">
+      <span class="login-btn"  (click)="toLogin()">
+        <span class="login-name" *ngIf="ifshow">请点击注册/登录</span>
+        <span class="login-name" *ngIf="!ifshow">{{user_name}}</span>
+        <ion-icon name="ios-arrow-forward-outline"></ion-icon>
+      </span>
+    </div>  
       <div class="login-list">
-        <div>
-          积分
-        </div>
-        <div>
-          点赞
-        </div>
+        <div>积分</div>
+        <div>收藏</div>
       </div>
-    </div>
   </div>
   <div class="menu-list">
       <div class="item-list" *ngFor="let item of barList" (click)="toDetail(item.name)">
@@ -36,4 +29,13 @@
         <div class="item-btn"><ion-icon name="ios-arrow-forward-outline"></ion-icon></div>
       </div>
   </div>
+  <!-- 设置：退出登陆、分享、建议 -->
+  <ion-fab bottom right >
+      <button ion-fab mini><ion-icon name="settings"></ion-icon></button>
+      <ion-fab-list side="left">
+        <button ion-fab><ion-icon name="exit"></ion-icon></button>
+        <button ion-fab><ion-icon name="share"></ion-icon></button>
+        <button ion-fab (click)="toSuggest()"><ion-icon name="build"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
 </ion-content>

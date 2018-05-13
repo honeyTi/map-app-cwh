@@ -2,9 +2,11 @@
 import { Component,ViewChild ,ElementRef} from '@angular/core';
 import { NavController, ModalController} from 'ionic-angular';
 import { CityPage } from './city/city';
+import { HttpProvider } from '../../providers/http/http';
 
 declare var BMap;
 declare var BMAP_ANCHOR_TOP_RIGHT;
+
 // declare var BMap_Symbol_SHAPE_POINT;
 
 @Component({
@@ -20,9 +22,10 @@ export class HomePage {
   // ViewChild可以获取到当前组件视图中的单个元素
   @ViewChild('map') map_container: ElementRef;
   map: any;//地图对象
-  marker: any;//标记
+  marker:any;
+  public cityPoint: object = {};
 
-  constructor(public navCtrl: NavController,public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController,public modalCtrl: ModalController,public http: HttpProvider,) {
   }
   
   ionViewDidEnter() {
@@ -62,8 +65,38 @@ export class HomePage {
       return div;
     }
     map.addControl(new subwayControl);
+
     //画出行政区域------------------------------------------------
-    
+    this.http.loadData('city', this.cityPoint).subscribe(
+      res => {
+        let city = JSON.parse(res);
+        let results = city.results;
+        console.log(results);
+        for(const item of results){
+         let pt = new BMap.Point(item.city_lng,item.city_lat);
+         let myIcon = new BMap.Icon("../../assets/imgs/map-icon.png",new BMap.Size(90,90));
+         let marker = this.marker = new BMap.Marker(pt,{icon:myIcon});
+         console.log(marker);
+         map.addOverlay(marker);
+        //  marker添加点击定位到区域事件
+        marker.addEventListener("click",()=>{
+          console.log(item.city_name);
+        });
+         let label = new BMap.Label(item.city_name,{offset:new BMap.Size(22,35)});
+         label.setStyle({
+           border: "none",
+           background:"none",
+           "font-size":"16px",
+           color:"#fff",
+
+         });
+         marker.setLabel(label);
+        }
+
+      },
+      err => {
+        console.log(err);
+      });
 }
   openModal(event){
     let modal = this.modalCtrl.create(CityPage);

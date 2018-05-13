@@ -1,62 +1,70 @@
 page-my {
     ion-title {
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold!important;
+        text-align: center;
+        font-size: 18px;
+        .toolbar-title-md{
+            color: #ea5404;
+            font-weight: bold;
+        }
     }
     .my-login {
         width: 100%;
-        height: 80px;
-        display: flex;
-        text-align: center;
+        height: 140px;
         background: #fff;
-        margin-bottom: 10px;
-        .login-imgs {
-            width: 30%;
+        margin: 2px 0 10px 0;
+        padding: 8px 0 8px 10px;
+        .top-login{
             height: 80px;
-            padding: 5px;
-            padding-left: 20px;
+            width: 100%;
+            display: flex;
             img {
-                display: block;
-                width: 70px;
-                height: 70px;
-                border-radius: 50%;
-                border:1px solid #e4393c;
+                float: left;
+                width: 80px;
+                height: 80px;
             }
-        }
-        .login-btn {
-            width: 70%;
-            height: 60px;
-            .login-name {
+            .login-btn {
+                float: left;
+                margin-left: 3vh;
                 width: 100%;
-                height: 60px;
-                line-height: 60px;
-                font-size: 16px;
-            }
-            .login-list {
-                width: 100%;
-                height: 20px;
-                display: flex;
-                div{
-                    height: 20px;
-                    line-height: 20px;
-                    width: 50%;
+                .login-name {
+                    line-height: 80px;
+                    font-size: 16px;
                 }
             }
+            ion-icon{
+                text-align: center;
+                width: 10%;
+                float: right;
+                line-height: 80px;
+            }
         }
+        .login-list {
+            width: 100%;
+            display: flex;
+            text-align: center;
+            div{
+                font-weight: bold;
+                float: left;
+                line-height: 50px;
+                width: 50%;
+            }
+        }
+        
+       
     }
     .item-list {
         width: 100%;
-        height: 40px;
-        font-size: 14px;
+        height: 46px;
+        font-size: 13px;
         display: flex;
         background: #fff;
-        line-height: 40px;
+        line-height: 46px;
         margin-top: 5px;
+        padding-left: 5px;
         .item-start-icon {
             width: 10%;
             text-align: center;
-            padding: 8px 5px;
+            padding: 8px 4px;
             div{
                 height: 24px;
             }
@@ -72,22 +80,22 @@ page-my {
     }
     .mySelect-1 {
         background: url('../../assets/imgs/myPage/select.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-2 {
         background: url('../../assets/imgs/myPage/send.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-3 {
         background: url('../../assets/imgs/myPage/homePage.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-4 {
         background: url('../../assets/imgs/myPage/transaction_fill.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
     .mySelect-5 {
         background: url('../../../assets/imgs/myPage/commodity.png') no-repeat center;
-        background-size: 100% 100%;
+        background-size: 20px;
     }
 }
