@@ -1,6 +1,6 @@
 ///<reference path="../../assets/js/jquery.d.ts"/>
 import { Component,ViewChild ,ElementRef} from '@angular/core';
-import { NavController, ModalController} from 'ionic-angular';
+import { NavController, ModalController, ActionSheetController, ToastController} from 'ionic-angular';
 import { CityPage } from './city/city';
 import { HttpProvider } from '../../providers/http/http';
 
@@ -25,10 +25,12 @@ export class HomePage {
   marker:any;
   public cityPoint: object = {};
 
-  constructor(public navCtrl: NavController,public modalCtrl: ModalController,public http: HttpProvider,) {
+  constructor(public navCtrl: NavController,public modalCtrl: ModalController,public http: HttpProvider,
+              public actionSheetCtrl: ActionSheetController,public toastCtrl: ToastController) {
   }
   
   ionViewDidEnter() {
+    let that = this;
     let map = this.map = new BMap.Map(this.map_container.nativeElement);//创建地图实例
     // 根据城市名定位地图
     map.centerAndZoom(this.city, 12);
@@ -40,7 +42,7 @@ export class HomePage {
     });
     geolocationControl.addEventListener("locationSuccess", function(e){
       let geoCity = e.addressComponent.city;
-      $('.cityName')[0].innerHTML = geoCity.substr(0,2);
+      that.city = geoCity.substr(0,2);
     });
     map.addControl(geolocationControl);
     
@@ -61,11 +63,13 @@ export class HomePage {
         "background-size":"55px 57px",
         "box-shadow": "1px 1px 1px rgba(0,0,0,.2)",
       });
+      $(div).click(() => {
+        that.presentActionSheet();
+      })
       map.getContainer().appendChild(div);
       return div;
     }
     map.addControl(new subwayControl);
-
     //画出行政区域------------------------------------------------
     this.http.loadData('city', this.cityPoint).subscribe(
       res => {
@@ -76,7 +80,6 @@ export class HomePage {
          let pt = new BMap.Point(item.city_lng,item.city_lat);
          let myIcon = new BMap.Icon("../../assets/imgs/map-icon.png",new BMap.Size(90,90));
          let marker = this.marker = new BMap.Marker(pt,{icon:myIcon});
-         console.log(marker);
          map.addOverlay(marker);
         //  marker添加点击定位到区域事件
         marker.addEventListener("click",()=>{
@@ -106,6 +109,36 @@ export class HomePage {
       this.ionViewDidEnter();
     })
     modal.present();
+  }
+  //显示地铁线
+  presentActionSheet() {
+    if(this.city == "永州"){
+      let toast = this.toastCtrl.create({
+        message:'该城市暂时没有地铁服务',
+        duration:3000,
+        position: 'middle',
+      });
+      toast.present();
+    }else if(this.city == "长沙"){
+      let actionSheet = this.actionSheetCtrl.create({
+        buttons: [
+          {
+            text: '1号线',
+            handler: () => {}
+          },
+          {
+            text: '2号线',
+            handler: () => {}
+          },
+          {
+            text: '磁浮快线',
+            handler: () => {}
+          }
+        ]
+      });
+      actionSheet.present();
+    }
+   
   }
   getItems(event) {
     console.log(this.myInput)
