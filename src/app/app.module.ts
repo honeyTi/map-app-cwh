@@ -12,6 +12,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { MyPage } from '../pages/my/my';
 import { BaiduMapModule } from 'angular2-baidu-map';
 import { ComponentsModule } from '../components/components.module';
+import { ServiceModule } from '../service/ws-socket/service.module';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -52,6 +53,7 @@ import { SuggestPage } from '../pages/suggest/suggest';
     BaiduMapModule,
     ComponentsModule,
     HttpModule,
+    ServiceModule,
     BaiduMapModule.forRoot({ ak: '0rtKLcFaEkANGnfrZR26h7b1dEVda9BI' }),
     IonicModule.forRoot(MyApp)
   ],
