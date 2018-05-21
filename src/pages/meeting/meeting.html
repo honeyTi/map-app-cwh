@@ -7,15 +7,20 @@
 </ion-header>
 
 <ion-content class="my-content" padding>
-  <ion-card>
-    <img src="../../assets/imgs/content_img_list@2x.png"/>
+  <ion-card *ngFor="let item of publishInfo">
+    <img src="../../assets/imgs/content_img_list@2x.png" />
     <ion-card-content>
       <ion-card-title>
-        
-        </ion-card-title>
+        {{item.publish_name}}
+      </ion-card-title>
       <p>
-        The most popular industrial group ever, and largely
-        responsible for bringing the music to a mass audience.
+        {{item.publish_content }}
+      </p>
+      <p>
+       电话： {{item.publish_tel}}
+      </p>
+      <p>
+        <button ion-button block  (click)="updataInfo(item.publish_id)">接受</button>
       </p>
     </ion-card-content>
   </ion-card>
